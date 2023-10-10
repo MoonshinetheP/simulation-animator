@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scales=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    Hello world 2
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Simulation</title>
+{% endblock %}
+
+{% block body %}
+<h1>Voltammetry simulations</h1>
+<p>Welcome to the e-SPARK web app!<p>
+
+</p>Here you can find animations of various voltammetry techniques, allowing you to discover the influence of many parameters without ever having to do an experiment!</p>
+<a href=\plots\1> Click here to go to CV simulations</a>\n",
+{% endblock %}

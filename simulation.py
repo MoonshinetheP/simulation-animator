@@ -214,19 +214,11 @@ if __name__ == '__main__':
     
     start = time.time()
     cwd = os.getcwd()
-
-    try:
-        os.makedirs(cwd + '/data')
-    except OSError as exc:
-        if exc.errno == EEXIST and os.path.isdir(cwd + '/data'):
-            pass
-        else: 
-            raise
     
-    shape = wf.DPV(Eini = 0, Efin = 0.5, dEs = 0.005, dEp = 0.01, pt = 0.01, rt = 0.03, st = 0.000001, detailed = False)
+    shape = wf.CV(Eini = 0, Eupp = 0.5, Elow = 0, dE = 0.005, sr = 0.1, ns = 1)
     instance = E(input = shape, E0 = 0.25, k0 = 0.1, a = 0.5, cR = 0.005, cO = 0.000, DR = 5E-6, DO = 5E-6, r = 0.15, expansion = 1.05, Nernstian = False, BV = True, MH = False)
     
-    filepath = cwd + '/data/' + 'pulse' + '.txt'
+    filepath = cwd + '/static/data/' + 'CV 0.5' + '.txt'
     with open(filepath, 'w') as file:
         for ix, iy, iz in instance.results():
             file.write(str(ix) + ',' + str(iy) + ',' + str(iz) + '\n')

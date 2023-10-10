@@ -1,0 +1,28 @@
+html {
+    font-size: 22px;
+}
+
+body {
+    background-color: #d3d2cf !important;
+    color: #6c0808 ;
+    
+}
+
+.container {
+    text-align: center;
+}
+
+.image-container,
+.slider-container {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+.image-container {
+    margin-right: 10px;
+}
+
+.slider-container {
+    margin-left: 10px;
+}
